@@ -41,3 +41,20 @@ article.tweets footer {
 #tweet-icons {
   color: blue;
 }
+
+article.tweets:hover {
+  border: 3px solid black;
+  box-shadow: 5px 10px #888888;
+}
+
+.fa-flag:hover {
+  color: orange;
+}
+
+.fa-retweet:hover {
+  color: orange;
+}
+
+.fa-heart:hover {
+  color: orange;
+}
