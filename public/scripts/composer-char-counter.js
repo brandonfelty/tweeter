@@ -16,6 +16,7 @@ $(document).ready( () => {
     const $counter = $(this).parent().next().children();
     console.log($counter[1].value)
     
+    // Adds a new class to the counter if the length available drops below zero
     if (lengthAvailable < 0) {
       $counter.addClass('counter-negative');
     }
