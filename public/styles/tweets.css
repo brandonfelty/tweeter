@@ -1,0 +1,43 @@
+article.tweets header {
+  display: flex;
+  justify-content: space-between;
+  padding: 5%;
+}
+
+#tweet-header-right {
+  display: flex;
+  align-items: center;
+  padding-right: 5%;
+}
+
+#tweet-name {
+  padding-left: 5%;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 300;
+}
+
+#tweet-tag {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 100;
+}
+
+article.tweets {
+  display: flex;
+  flex-direction: column;
+  border: 3px solid black;
+  margin: 5%;
+  padding: 3%;
+  padding-top: 0%;
+  padding-bottom: 0%;
+}
+
+article.tweets footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 3px solid black;
+}
+
+#tweet-icons {
+  color: blue;
+}

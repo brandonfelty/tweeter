@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/tweets.css" type="text/css" />
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -36,7 +37,7 @@
         <i class="fa-solid fa-angles-down"></i>
       </div>
     </nav>
-    <header>
+    <header id="header-top">
       <div class="aligner">
         <div class="aligner-item aligner-item-top"></div>
         <div class="aligner-item aligner-item-middle">
@@ -64,8 +65,27 @@
           </div>
         </form>
       </section>
-      <section class="tweets">
-        
+      <section>
+        <article class="tweets">
+          <header>
+            <div id="tweet-header-right">
+              <i class="fa-solid fa-user-astronaut"></i>
+              <h3 id="tweet-name">Newton</h3>
+            </div>
+            <h3 id="tweet-tag">@SirIsaac</h3>
+          </header>
+          <p>
+            If I have seen further it is by standing on the shoulders of giants
+          </p>
+          <footer>
+            <p><small>10 Days Ago</small></p>
+            <div id="tweet-icons">
+              <i class="fa-solid fa-flag"></i>
+              <i class="fa-solid fa-retweet"></i>
+              <i class="fa-solid fa-heart"></i>
+            </div>
+          </footer>
+        </article>
       </section>
     </main>
   </body>
