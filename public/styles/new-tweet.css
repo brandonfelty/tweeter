@@ -21,9 +21,18 @@
   justify-content: space-between;
 }
 
-button {
+#button {
   background-color: blue;
   color: white;
   font-family: 'Bungee', sans-serif;
+}
+
+.counter {
+  font-family: 'Bungee', sans-serif;
+}
+
+.counter-negative {
+  font-family: 'Bungee', sans-serif;
+  color: red;
 }
 
