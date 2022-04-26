@@ -11,8 +11,11 @@ $(document).ready( () => {
     for (const char of input) {
       lengthAvailable--;
     }
-
+    
     // Dynamically updates the counter 
-    $('.counter').val(lengthAvailable);
+    const $counter = $(this).parent().next().children()[1];
+    console.log($counter.value)
+    $counter.value = lengthAvailable;
+    //$('.counter').val(lengthAvailable);
   });
 });
