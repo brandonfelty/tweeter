@@ -22,13 +22,24 @@ $( () => {
   }
 
   const createTweetElement = function(tweet) {
-  
+
+    
     // get info for article
     const img = tweet.user.avatars;
     const username = tweet.user.name;
     const handle = tweet.user.handle;
     const text = tweet.content.text;
     const time = timeago.format(tweet.created_at);
+    
+    // Function to escape text 
+    const escape = function (str) {
+      let div = document.createElement("div");
+      div.appendChild(document.createTextNode(str));
+      return div.innerHTML;
+    };
+
+    const safeHTML = `<p>${escape(text)}</p>`;
+
 
     // put all together in html article
     const article = `
@@ -40,9 +51,7 @@ $( () => {
           </div>
             <h3 class="tweet-handle">${handle}</h3>
         </header>
-        <p>
-          ${text}
-        </p>
+        ${safeHTML}
         <footer>
           <p><small>${time}</small></p>
           <div id="tweet-icons">
@@ -76,8 +85,9 @@ $( () => {
     }
 
     $.post(url, serializedFormData, () => {
-      location.reload();
     });
+
+    location.reload();
   })
 
   // function that retrieves an array of tweets from the database and renders them in the app
