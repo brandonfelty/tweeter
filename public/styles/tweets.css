@@ -62,3 +62,21 @@ article.tweets:hover {
 #tweets-container {
   width: 100%;
 }
+
+#scroll-to-top:hover {
+  background-color: black;
+}
+
+.scroll {
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+#scroll-to-top {
+  border-radius: 50%;
+  color: red;
+  margin-bottom: 5px;
+}

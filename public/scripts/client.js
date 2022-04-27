@@ -7,6 +7,7 @@
 // Function takes in a tweet object and returns tweet <article> element in html
 
 $(() => {
+  $('#scroll-to-top').hide();
 
   const renderTweets = function (tweets) {
     const container = $('#tweets-container');
@@ -75,10 +76,10 @@ $(() => {
     const serializedFormData = $(this).serialize();
     const textLength = serializedFormData.length;
     const url = $(this).attr("action");
-    
+
     // Reset error message 
     $('.error').slideUp("slow");
-    
+
     // Check if input is empty (input is empty when serializedFormData = 'text='). Error message pop up if true.
     if (textLength === 5) {
       $('.error').slideDown("slow");
@@ -111,7 +112,24 @@ $(() => {
     $('section.new-tweet:visible').slideUp();
     $('section.new-tweet:hidden').slideDown();
     $("#tweet-text").focus();
-  })
+  });
+  // Event listener for scroll so that button appears on screen when user scrolls
+  $(window).scroll(function (event) {
+    event.preventDefault();
+    $("nav").hide();
+    $("#scroll-to-top").show();
+    if ($(window).scrollTop() === 0) {
+      console.log('at the top');
+      $("nav").show();
+      $("#scroll-to-top").hide();
+    }
+  });
+
+  $("#scroll-to-top").click(function (event) {
+    $(window).scrollTop(0);
+    $('section.new-tweet:hidden').slideDown();
+    $("#tweet-text").focus();
+  });
 
   loadTweets();
 });
