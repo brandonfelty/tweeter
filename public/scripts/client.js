@@ -83,4 +83,10 @@ $( () => {
   };
   
   renderTweets(data);
+
+  
+  $("form").submit( function(event) {
+
+    event.preventDefault();
+  })
 });
