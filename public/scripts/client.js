@@ -69,6 +69,7 @@ $( () => {
 
   // Event listener.. Checks for form click and then posts the serialized form data to the server
   $("form").submit( function(event) {
+    $('.error').slideUp("slow");
     event.preventDefault();
     const serializedFormData = $(this).serialize();
     const textLength = serializedFormData.length;
@@ -76,18 +77,26 @@ $( () => {
 
     // Check if input is empty (input is empty when serializedFormData = 'text=')
     if (textLength === 5) {
-      return alert('If you tweet, tweet something!');
+      $('.error').slideUp("slow");
+      $('.error').slideDown("slow");
+      //$('.error').css('display', 'block');
+      return $('.error').html('If you tweet, tweet something!')
+      // return alert('If you tweet, tweet something!');
     }
 
     // Check if input is greater than max
     if (textLength >= 145) {
-      return alert('Please shorten your tweet');
+      //$('.error').css('display', 'block');
+      $('.error').slideUp("slow");
+      $('.validation').slideDown("slow");
+      return $('.validation').html('Please shorten your tweet')
+      // return alert('Please shorten your tweet');
     }
 
     $.post(url, serializedFormData, () => {
     });
 
-    location.reload();
+    //location.reload();
   })
 
   // function that retrieves an array of tweets from the database and renders them in the app

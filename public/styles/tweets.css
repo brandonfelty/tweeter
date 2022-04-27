@@ -58,3 +58,7 @@ article.tweets:hover {
 .fa-heart:hover {
   color: orange;
 }
+
+#tweets-container {
+  width: 100%;
+}
