@@ -30,7 +30,6 @@ $( () => {
     const text = tweet.content.text;
     const time = timeago.format(tweet.created_at);
 
-    console.log(time)
     // put all together in html article
     const article = `
       <article class="tweets">
@@ -63,7 +62,19 @@ $( () => {
   $("form").submit( function(event) {
     event.preventDefault();
     const serializedFormData = $(this).serialize();
+    const textLength = serializedFormData.length;
     const url = $(this).attr("action");
+
+    // Check if input is empty (input is empty when serializedFormData = 'text=')
+    if (textLength === 5) {
+      return alert('If you tweet, tweet something!');
+    }
+
+    // Check if input is greater than max
+    if (textLength >= 145) {
+      return alert('Please shorten your tweet');
+    }
+
     $.post(url, serializedFormData, () => {
       location.reload();
     });
