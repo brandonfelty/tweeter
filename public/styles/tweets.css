@@ -10,13 +10,13 @@ article.tweets header {
   padding-right: 5%;
 }
 
-#tweet-name {
+article.tweet-name {
   padding-left: 5%;
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 300;
 }
 
-#tweet-tag {
+article.tweet-tag {
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 100;
 }
