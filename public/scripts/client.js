@@ -64,7 +64,9 @@ $( () => {
     event.preventDefault();
     const serializedFormData = $(this).serialize();
     const url = $(this).attr("action");
-    $.post(url, serializedFormData);
+    $.post(url, serializedFormData, () => {
+      location.reload();
+    });
   })
 
   // function that retrieves an array of tweets from the database and renders them in the app
