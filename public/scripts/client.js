@@ -17,7 +17,7 @@ $( () => {
       const $tweet = createTweetElement(tweet);
 
       // takes return value and appends it to the tweets container
-      $('#tweets-container').append($tweet);
+      $('#tweets-container').prepend($tweet);
     }
   }
 
@@ -28,8 +28,9 @@ $( () => {
     const username = tweet.user.name;
     const handle = tweet.user.handle;
     const text = tweet.content.text;
-    const time = tweet.created_at;
-    
+    const time = timeago.format(tweet.created_at);
+
+    console.log(time)
     // put all together in html article
     const article = `
       <article class="tweets">
@@ -66,7 +67,7 @@ $( () => {
     $.post(url, serializedFormData);
   })
 
-  // function that retrieves an array of tweets from the database
+  // function that retrieves an array of tweets from the database and renders them in the app
   const loadTweets = function() {
     $.get("/tweets", function(data) {
       renderTweets(data);
