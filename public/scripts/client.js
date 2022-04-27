@@ -110,6 +110,7 @@ $(() => {
     event.preventDefault();
     $('section.new-tweet:visible').slideUp();
     $('section.new-tweet:hidden').slideDown();
+    $("#tweet-text").focus();
   })
 
   loadTweets();
