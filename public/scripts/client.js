@@ -71,28 +71,24 @@ $(() => {
 
   // Event listener.. Checks for form click and then posts the serialized form data to the server
   $("form").submit(function (event) {
-    $('.error').slideUp("slow");
     event.preventDefault();
     const serializedFormData = $(this).serialize();
     const textLength = serializedFormData.length;
     const url = $(this).attr("action");
-
-    // Check if input is empty (input is empty when serializedFormData = 'text=')
+    
+    // Reset error message 
+    $('.error').slideUp("slow");
+    
+    // Check if input is empty (input is empty when serializedFormData = 'text='). Error message pop up if true.
     if (textLength === 5) {
-      $('.error').slideUp("slow");
       $('.error').slideDown("slow");
-      //$('.error').css('display', 'block');
       return $('.error').html('If you tweet, tweet something!');
-      // return alert('If you tweet, tweet something!');
     }
 
-    // Check if input is greater than max
+    // Check if input is greater than max. Error message pop up if true.
     if (textLength >= 145) {
-      //$('.error').css('display', 'block');
-      $('.error').slideUp("slow");
       $('.validation').slideDown("slow");
       return $('.validation').html('Please shorten your tweet');
-      // return alert('Please shorten your tweet');
     }
 
     $.post(url, serializedFormData, () => {
@@ -108,6 +104,13 @@ $(() => {
       }
       );
   };
+
+  // Added functionality for a button that will either hide or make visible the new tweet section
+  $(".nav-buttons").click(function (event) {
+    event.preventDefault();
+    $('section.new-tweet:visible').slideUp();
+    $('section.new-tweet:hidden').slideDown();
+  })
 
   loadTweets();
 });
