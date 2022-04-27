@@ -86,7 +86,10 @@ $( () => {
 
   
   $("form").submit( function(event) {
-
     event.preventDefault();
+    console.log($(this).serialize());
+    const serializedFormData = $(this).serialize();
+    const url = $(this).attr("action");
+    $.post(url, serializedFormData);
   })
 });
