@@ -17,17 +17,8 @@ span {
   align-items: center;
 }
 
-body {
-  position: relative;
-}
-
-header {
-  z-index: 1;
-}
-
 .nav-buttons {
   background-color: #4056A1;
-
 }
 
 .nav-buttons:hover {

@@ -1,22 +1,20 @@
 article.tweets header {
   display: flex;
   justify-content: space-between;
-  padding: 5%;
 }
 
 #tweet-header-right {
   display: flex;
   align-items: center;
-  padding-right: 5%;
 }
 
-article.tweet-name {
+h3.tweet-name {
   padding-left: 5%;
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 300;
 }
 
-article.tweet-tag {
+h3.tweet-handle {
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 100;
 }
@@ -29,6 +27,10 @@ article.tweets {
   padding: 3%;
   padding-top: 0%;
   padding-bottom: 0%;
+}
+
+article.tweets p {
+  word-wrap: break-word;
 }
 
 article.tweets footer {
@@ -47,15 +49,7 @@ article.tweets:hover {
   box-shadow: 5px 10px #888888;
 }
 
-.fa-flag:hover {
-  color: orange;
-}
-
-.fa-retweet:hover {
-  color: orange;
-}
-
-.fa-heart:hover {
+.fa-solid:hover {
   color: orange;
 }
 

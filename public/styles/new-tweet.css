@@ -9,6 +9,7 @@ section.new-tweet {
   border: none;
   resize: none;
   height: 35px;
+  width: 100%;
 }
 
 .tweet-upper {
@@ -34,7 +35,6 @@ section.new-tweet {
 }
 
 .counter-negative {
-  font-family: 'Bungee', sans-serif;
   color: red;
 }
 
@@ -50,13 +50,6 @@ section.new-tweet {
   color: #D8000C;
 	background-color: #FFBABA;
 	background-image: url('https://i.imgur.com/GnyDvKN.png');
-}
-
-.error {
-	color: #D8000C;
-	background-color: #FFBABA;
-	background-image: url('https://i.imgur.com/GnyDvKN.png');
-  display: none;
 }
 
 

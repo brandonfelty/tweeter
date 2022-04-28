@@ -20,6 +20,11 @@ $(document).ready( () => {
       $counter.addClass('counter-negative');
     }
 
+    // Remove the negative class if counter goes back above zero
+    if (lengthAvailable >= 0) {
+      $counter.removeClass('counter-negative');
+    }
+
     $counter[1].value = lengthAvailable;
     //$('.counter').val(lengthAvailable);
   });

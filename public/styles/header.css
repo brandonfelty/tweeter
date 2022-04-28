@@ -1,34 +1,23 @@
 #header-top {
   height: 400px;
   width: 100%;
-
 }
 
 .aligner {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   zoom: 0.8;
   background-color: #f0771a;
   background-image: url("https://www.transparenttextures.com/patterns/food.png");
-}
-
-.aligner-item {
-  max-width: 50%;
 }
 
 .aligner-item-top {
   height: 150px;
 }
 
-.aligner-item-middle {
-  align-self: center;
-  height: 150px;
-}
-
 .profile-pic {
-  height: 200px;
+  height: 15rem;
 }
 
 /* Desktop */
