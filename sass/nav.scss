@@ -1,4 +1,10 @@
 @use 'layout';
+@mixin align($align: center) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
 nav {
   position: fixed;
@@ -18,10 +24,7 @@ nav {
     align-items: center;
   }
   div {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @include align;
     button {
       background-color: layout.$secondary-color;
     }

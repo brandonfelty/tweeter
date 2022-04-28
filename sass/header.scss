@@ -1,4 +1,9 @@
 @use 'layout';
+@mixin align($align: center) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 #header-top {
   height: 400px;
@@ -6,9 +11,7 @@
 }
 
 .aligner {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  @include align;
   zoom: 0.8;
   background-color: layout.$primary-color;
   background-image: layout.$background-image;
