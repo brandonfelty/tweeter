@@ -60,26 +60,22 @@ nav {
   display: flex;
   justify-content: space-between;
 }
-
-span {
+nav span {
   font-family: "Bungee", sans-serif;
   display: flex;
   align-items: center;
 }
-
-.nav-buttons {
-  background-color: #4056A1;
-}
-
-.nav-buttons:hover {
-  font-weight: bold;
-}
-
-.nav-right {
+nav div {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+nav div button {
+  background-color: #4056A1;
+}
+nav div button:hover {
+  font-weight: bold;
 }
 
 /* Desktop */

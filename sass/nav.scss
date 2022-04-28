@@ -12,27 +12,23 @@ nav {
   padding-right: 1.5em;
   display: flex;
   justify-content: space-between;
-}
-
-span {
-  font-family: layout.$secondary-font;
-  display: flex;
-  align-items: center;
-}
-
-.nav-buttons {
-  background-color: layout.$secondary-color;
-}
-
-.nav-buttons:hover {
-  font-weight: bold;
-}
-
-.nav-right {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  span {
+    font-family: layout.$secondary-font;
+    display: flex;
+    align-items: center;
+  }
+  div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    button {
+      background-color: layout.$secondary-color;
+    }
+    button:hover {
+      font-weight: bold;
+    }
+  }
 }
 
 /* Desktop */
