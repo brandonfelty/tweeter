@@ -1,5 +1,5 @@
 // Make sure the dom is loaded
-$(document).ready( () => {
+$(document).ready(() => {
 
   // Set tweet-text id to variable and then check for changes to the value in the form
   const tweetText = document.getElementById("tweet-text");
@@ -12,9 +12,9 @@ $(document).ready( () => {
       lengthAvailable--;
     }
 
-    // Dynamically updates the counter 
+    // Dynamically updates the counter
     const $counter = $(this).parent().next().children();
-    
+
     // Adds a new class to the counter if the length available drops below zero
     if (lengthAvailable < 0) {
       $counter.addClass('counter-negative');
@@ -25,7 +25,7 @@ $(document).ready( () => {
       $counter.removeClass('counter-negative');
     }
 
+    // Updates the counter's value
     $counter[1].value = lengthAvailable;
-    //$('.counter').val(lengthAvailable);
   });
 });

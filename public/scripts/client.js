@@ -4,28 +4,28 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-// Function takes in a tweet object and returns tweet <article> element in html
 
+// Function takes in a tweet object and returns tweet <article> element in html
+// Execute js when document is ready
 $(() => {
+
+  // Hide the scroll button when user first visits page.
   $('#scroll-to-top').hide();
 
-  const renderTweets = function (tweets) {
+  // Function that takes in the tweet data from the database and renders it on the page.
+  const renderTweets = function(tweets) {
     const container = $('#tweets-container');
     container.empty();
 
-    // loops through tweets
+    // For each tweet, a html article is created and prepends it to the tweet container.
     for (const tweet of tweets) {
-
-      // calls createTweetElement for each tweet
       const $tweet = createTweetElement(tweet);
-
-      // takes return value and appends it to the tweets container
       container.prepend($tweet);
     }
   };
 
-  const createTweetElement = function (tweet) {
-
+  // Function that takes in tweet data and returns the proper html article.
+  const createTweetElement = function(tweet) {
 
     // get info for article
     const img = tweet.user.avatars;
@@ -34,8 +34,8 @@ $(() => {
     const text = tweet.content.text;
     const time = timeago.format(tweet.created_at);
 
-    // Function to escape text 
-    const escape = function (str) {
+    // Function to escape text
+    const escape = function(str) {
       let div = document.createElement("div");
       div.appendChild(document.createTextNode(str));
       return div.innerHTML;
@@ -70,14 +70,14 @@ $(() => {
     return article;
   };
 
-  // Event listener.. Checks for form click and then posts the serialized form data to the server
-  $("form").submit(function (event) {
+  // Event listener.. Checks for form click and then posts the serialized form data to the server.
+  $("form").submit(function(event) {
     event.preventDefault();
     const serializedFormData = $(this).serialize();
     const textLength = serializedFormData.length;
     const url = $(this).attr("action");
 
-    // Reset error message 
+    // Reset error message
     $('.error').slideUp("slow");
     $('.validation').slideUp("slow");
 
@@ -93,15 +93,16 @@ $(() => {
       return $('.validation').html('Please shorten your tweet');
     }
 
+    // When user submits a valid tweet, load the tweets again and clear the new-tweet section and counter.
     $.post(url, serializedFormData, () => {
       loadTweets();
       $('#tweet-text').val("");
-      $('.counter').val("140");  
+      $('.counter').val("140");
     });
   });
 
   // function that retrieves an array of tweets from the database and renders them in the app
-  const loadTweets = function () {
+  const loadTweets = function() {
     $.get("/tweets")
       .then((data) => {
         renderTweets(data);
@@ -110,14 +111,15 @@ $(() => {
   };
 
   // Added functionality for a button that will either hide or make visible the new tweet section
-  $(".nav-buttons").click(function (event) {
+  $(".nav-buttons").click(function(event) {
     event.preventDefault();
     $('section.new-tweet:visible').slideUp();
     $('section.new-tweet:hidden').slideDown();
     $("#tweet-text").focus();
   });
+  
   // Event listener for scroll so that button appears on screen when user scrolls
-  $(window).scroll(function (event) {
+  $(window).scroll(function(event) {
     event.preventDefault();
     $("nav").hide();
     $("#scroll-to-top").show();
@@ -127,11 +129,13 @@ $(() => {
     }
   });
 
-  $("#scroll-to-top").click(function (event) {
+  // Event listener that scrolls the user's window to top of the page when the button is clicked.
+  $("#scroll-to-top").click(function() {
     $(window).scrollTop(0);
     $('section.new-tweet:hidden').slideDown();
     $("#tweet-text").focus();
   });
 
+  // Loads the tweets in the database when the user refreshes the page or first visits the site. 
   loadTweets();
 });
