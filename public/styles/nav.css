@@ -3,7 +3,7 @@ nav {
   top: 0%;
   height: 120px;
   width: 100%;
-  background-color: #4056A1;
+  background-color: #f0771a;
   color: #FFFFFF;
   padding-left: 1.5em;
   padding-right: 1.5em;
@@ -39,4 +39,12 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+/* Desktop */
+
+@media only screen and (min-width: 1024px) {
+  nav {
+   background-color: #4056A1;
+ }
 }

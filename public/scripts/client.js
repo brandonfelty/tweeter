@@ -79,6 +79,7 @@ $(() => {
 
     // Reset error message 
     $('.error').slideUp("slow");
+    $('.validation').slideUp("slow");
 
     // Check if input is empty (input is empty when serializedFormData = 'text='). Error message pop up if true.
     if (textLength === 5) {
@@ -94,6 +95,8 @@ $(() => {
 
     $.post(url, serializedFormData, () => {
       loadTweets();
+      $('#tweet-text').val("");
+      $('.counter').val("140");  
     });
   });
 
@@ -119,7 +122,6 @@ $(() => {
     $("nav").hide();
     $("#scroll-to-top").show();
     if ($(window).scrollTop() === 0) {
-      console.log('at the top');
       $("nav").show();
       $("#scroll-to-top").hide();
     }

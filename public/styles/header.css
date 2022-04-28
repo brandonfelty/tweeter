@@ -1,8 +1,7 @@
 #header-top {
   height: 400px;
   width: 100%;
-  background-color: #f0771a;
-  background-image: url("https://www.transparenttextures.com/patterns/food.png");
+
 }
 
 .aligner {
@@ -10,6 +9,9 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  zoom: 0.8;
+  background-color: #f0771a;
+  background-image: url("https://www.transparenttextures.com/patterns/food.png");
 }
 
 .aligner-item {
@@ -17,7 +19,7 @@
 }
 
 .aligner-item-top {
-  height: 120px;
+  height: 150px;
 }
 
 .aligner-item-middle {
@@ -29,3 +31,15 @@
   height: 200px;
 }
 
+/* Desktop */
+
+@media only screen and (min-width: 1024px) {
+  #header-top {
+   width: 80%;
+   margin-top: 120px;
+ }
+ .aligner {
+   margin: 20%;
+   zoom: 0.6;
+}
+}
