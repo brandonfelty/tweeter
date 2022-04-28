@@ -1,0 +1,44 @@
+@use 'layout';
+
+nav {
+  position: fixed;
+  top: 0%;
+  height: 120px;
+  width: 100%;
+  background-color: layout.$primary-color;
+  color: layout.$background-color;
+  background-image: layout.$background-image;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  display: flex;
+  justify-content: space-between;
+}
+
+span {
+  font-family: layout.$secondary-font;
+  display: flex;
+  align-items: center;
+}
+
+.nav-buttons {
+  background-color: layout.$secondary-color;
+}
+
+.nav-buttons:hover {
+  font-weight: bold;
+}
+
+.nav-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Desktop */
+
+@media only screen and (min-width: 1024px) {
+  nav {
+   background-color: layout.$secondary-color;
+ }
+}

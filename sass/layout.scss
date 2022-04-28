@@ -1,0 +1,62 @@
+/*
+ * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+ * https://css-tricks.com/international-box-sizing-awareness-day/
+ * Do not modify these two selectors, please
+ */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/*
+ * Global layout stuff
+ */
+
+$base-color: #545149;
+$background-color: #f4f1ec;
+$base-font:'Source Sans Pro'; 
+$primary-color: #f0771a;
+$secondary-color: #4056A1;
+$secondary-font:'Bungee', sans-serif;
+$background-image: url("https://www.transparenttextures.com/patterns/food.png");
+$border-color: rgb(66, 65, 65);
+$error-color: red;
+$error-background-color:#FFBABA;
+$error-image: url('https://i.imgur.com/GnyDvKN.png');
+
+body {
+  color: $base-color;
+  background-color: $background-color;
+  font-size: 24px;
+  font-family: $base-font;
+}
+
+/*
+ * Additional CSS can be defined below or in other CSS files, as per instructions
+ */
+
+ main {
+   width: 100%;
+   align-items: center;
+   background-color: $background-color;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   margin-left: auto;
+   margin-right: auto;
+ }
+
+ /* Desktop */
+
+ @media only screen and (min-width: 1024px) {
+   body {
+     display: flex;
+     justify-content: space-between;
+   }
+   main {
+     zoom: 0.7;
+     margin-top: 5rem;
+   }
+ }

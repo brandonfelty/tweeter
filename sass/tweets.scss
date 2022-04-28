@@ -1,0 +1,79 @@
+@use 'layout';
+$box-shadow-color: #888888;
+
+article.tweets header {
+  display: flex;
+  justify-content: space-between;
+}
+
+#tweet-header-right {
+  display: flex;
+  align-items: center;
+}
+
+h3.tweet-name {
+  padding-left: 5%;
+  font-family: layout.$base-font;
+  font-weight: 300;
+}
+
+h3.tweet-handle {
+  font-family: layout.$base-font;
+  font-weight: 100;
+}
+
+article.tweets {
+  display: flex;
+  flex-direction: column;
+  border: 3px solid layout.$border-color;
+  margin: 5%;
+  padding: 3%;
+  padding-top: 0%;
+  padding-bottom: 0%;
+}
+
+article.tweets p {
+  word-wrap: break-word;
+}
+
+article.tweets footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 3px solid layout.$border-color;
+}
+
+#tweet-icons {
+  color: layout.$secondary-color;
+}
+
+article.tweets:hover {
+  border: 3px solid layout.$border-color;
+  box-shadow: 5px 10px $box-shadow-color;
+}
+
+.fa-solid:hover {
+  color: layout.$primary-color;
+}
+
+#tweets-container {
+  width: 100%;
+}
+
+#scroll-to-top:hover {
+  background-color: $box-shadow-color;
+}
+
+.scroll {
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+#scroll-to-top {
+  border-radius: 50%;
+  color: layout.$secondary-color;
+  margin-bottom: 5px;
+}

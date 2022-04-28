@@ -1,3 +1,52 @@
+/*
+ * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+ * https://css-tricks.com/international-box-sizing-awareness-day/
+ * Do not modify these two selectors, please
+ */
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/*
+ * Global layout stuff
+ */
+body {
+  color: #545149;
+  background-color: #f4f1ec;
+  font-size: 24px;
+  font-family: "Source Sans Pro";
+}
+
+/*
+ * Additional CSS can be defined below or in other CSS files, as per instructions
+ */
+main {
+  width: 100%;
+  align-items: center;
+  background-color: #f4f1ec;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Desktop */
+@media only screen and (min-width: 1024px) {
+  body {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  main {
+    zoom: 0.7;
+    margin-top: 5rem;
+  }
+}
 article.tweets header {
   display: flex;
   justify-content: space-between;
@@ -10,19 +59,19 @@ article.tweets header {
 
 h3.tweet-name {
   padding-left: 5%;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Source Sans Pro";
   font-weight: 300;
 }
 
 h3.tweet-handle {
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Source Sans Pro";
   font-weight: 100;
 }
 
 article.tweets {
   display: flex;
   flex-direction: column;
-  border: 3px solid black;
+  border: 3px solid rgb(66, 65, 65);
   margin: 5%;
   padding: 3%;
   padding-top: 0%;
@@ -37,20 +86,20 @@ article.tweets footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-top: 3px solid black;
+  border-top: 3px solid rgb(66, 65, 65);
 }
 
 #tweet-icons {
-  color: blue;
+  color: #4056A1;
 }
 
 article.tweets:hover {
-  border: 3px solid black;
+  border: 3px solid rgb(66, 65, 65);
   box-shadow: 5px 10px #888888;
 }
 
 .fa-solid:hover {
-  color: orange;
+  color: #f0771a;
 }
 
 #tweets-container {
@@ -58,7 +107,7 @@ article.tweets:hover {
 }
 
 #scroll-to-top:hover {
-  background-color: black;
+  background-color: #888888;
 }
 
 .scroll {
@@ -71,6 +120,6 @@ article.tweets:hover {
 
 #scroll-to-top {
   border-radius: 50%;
-  color: red;
+  color: #4056A1;
   margin-bottom: 5px;
 }

@@ -1,0 +1,65 @@
+@use 'layout';
+
+section.new-tweet {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
+
+#tweet-text {
+  background-color: layout.$background-color;
+  border: none;
+  resize: none;
+  height: 35px;
+  width: 100%;
+}
+
+.tweet-upper {
+  border-bottom: 3px solid layout.$border-color;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+  margin-top: 20px;
+}
+
+.tweet-lower {
+  display: flex;
+  justify-content: space-between;
+}
+
+#button {
+  background-color: layout.$secondary-color;
+  color: layout.$background-color;
+  font-family: 'Bungee', sans-serif;
+}
+
+.counter {
+  font-family: layout.$secondary-font;
+}
+
+.counter-negative {
+  color: layout.$error-color;
+}
+
+.error,
+.validation {
+	border: 1px solid;
+	margin: 10px auto;
+	padding: 15px 10px 15px 50px;
+	background-repeat: no-repeat;
+	background-position: 10px center;
+	max-width: 460px;
+  display: none;
+  color: layout.$error-color;
+	background-color: layout.$error-background-color;
+	background-image: layout.$error-image;
+}
+
+
+/* Desktop */
+
+@media only screen and (min-width: 1024px) {
+  section.new-tweet {
+   margin-top: 200px;
+   width: 85%;
+ }
+}

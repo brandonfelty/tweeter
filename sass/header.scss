@@ -1,0 +1,36 @@
+@use 'layout';
+
+#header-top {
+  height: 400px;
+  width: 100%;
+}
+
+.aligner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  zoom: 0.8;
+  background-color: layout.$primary-color;
+  background-image: layout.$background-image;
+}
+
+.aligner-item-top {
+  height: 150px;
+}
+
+.profile-pic {
+  height: 15rem;
+}
+
+/* Desktop */
+
+@media only screen and (min-width: 1024px) {
+  #header-top {
+   width: 80%;
+   margin-top: 120px;
+ }
+ .aligner {
+   margin: 20%;
+   zoom: 0.6;
+}
+}
