@@ -6,7 +6,7 @@ This was a great opportunity to practice HTML, CSS, JS, jQuery and AJAX front-en
 
 ## Final Product
 
-!["Page in desktop view"](https://github.com/brandonfelty/tweeter/blob/master/docs/Desktop.png)
+!["Page in desktop view"](https://github.com/brandonfelty/tweeter/blob/master/docs/Desktop1.png)
 !["Main page in mobile view"](https://github.com/brandonfelty/tweeter/blob/master/docs/Main.png)
 !["Image of tweets in mobile view"](https://github.com/brandonfelty/tweeter/blob/master/docs/Tweet.png)
 
