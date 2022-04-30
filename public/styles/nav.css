@@ -85,4 +85,6 @@ nav div button:hover {
   nav {
     background-color: #4056A1;
   }
+  nav div button {
+    background-color: #f0771a;
 }
