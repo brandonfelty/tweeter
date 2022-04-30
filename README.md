@@ -6,9 +6,9 @@ This was a great opportunity to practice HTML, CSS, JS, jQuery and AJAX front-en
 
 ## Final Product
 
-!["Page in desktop view"](https://github.com/brandonfelty/tweeter/blob/master/screenshots/Desktop.png)
-!["Main page in mobile view"](https://github.com/brandonfelty/tweeter/blob/master/screenshots/Main.png)
-!["Image of tweets in mobile view"](https://github.com/brandonfelty/tweeter/blob/master/screenshots/Tweet.png)
+!["Page in desktop view"](https://github.com/brandonfelty/tweeter/blob/master/docs/Desktop.png)
+!["Main page in mobile view"](https://github.com/brandonfelty/tweeter/blob/master/docs/Main.png)
+!["Image of tweets in mobile view"](https://github.com/brandonfelty/tweeter/blob/master/docs/Tweet.png)
 
 ## Getting Started
 
