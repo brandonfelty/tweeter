@@ -90,7 +90,7 @@ $(() => {
     // Check if input is greater than max. Error message pop up if true.
     if (textLength > 145) {
       $('.validation').slideDown("slow");
-      $('.validation').html('Please shorten your tweet');
+      return $('.validation').html('Please shorten your tweet');
     }
 
     // When user submits a valid tweet, load the tweets again and clear the new-tweet section and counter.
